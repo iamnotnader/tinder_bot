@@ -1,3 +1,26 @@
+Nader's Version:
+1) Make sure Ruby is installed. I think you need 2.0.0
+
+2) Figure out your facebook token by following:
+    - http://nickfishman.com/post/50557873036/reverse-engineering-native-apps-by-intercepting-network
+
+3) Change FACEBOOK_TOKEN and FACEBOOK_ID in run_tinder.rb
+
+
+4) Change latitude and longitude to where you want to be in run_tinder.rb
+
+
+5) ./run_tinder.rb > matches_<location>
+    - eg: ./run_tinder.rb > matches_soho
+
+
+6) tail -f matched_location
+    - eg: tail -f matches_soho
+    - This shows you some information on the girls you're "like"ing.
+
+
+
+
 Tinder Pyro
 ===========
 

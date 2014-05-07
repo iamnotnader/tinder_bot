@@ -1,6 +1,6 @@
 require 'httparty'
 require 'json'
 
-require 'pyro/client'
-require 'pyro/requestor'
-require 'pyro/utilities'
+require_relative 'pyro/client.rb'
+require_relative 'pyro/requestor.rb'
+require_relative 'pyro/utilities.rb'
