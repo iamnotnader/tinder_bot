@@ -1,4 +1,7 @@
+Fork of Tinder Pyro, a bot that lets you auto-like and message on Tinder.
+
 Nader's Version:
+
 1) Make sure Ruby is installed. I think you need 2.0.0
 
 2) Figure out your facebook token by following:
