@@ -1,6 +1,0 @@
-Seeds the database for testing the frontend.
-
-This assumes you have the following directory structure:
- ~/Development/biddie_frontend/app/scripts
-
-If you don't have this directory structure-- you should rearrange things.

@@ -1,8 +1,0 @@
-# BEFORE YOU CAN RUN THIS YOU MUST:
-#
-# Access Key ID: AKIAIG7755NS5AF6TD7Q
-# Secret Access Key: 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
-# > pip install s3cmd
-# > s3cmd --configure
-
-s3cmd sync --recursive --guess-mime-type --acl-public dist/ s3://www.biddie.io/

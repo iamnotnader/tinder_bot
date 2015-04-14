@@ -1,3 +1,0 @@
-use server;
-
-db.bids.insert({ "receiver_id" : ObjectId("54b7385d194498a1acecc5c1"), "time_bid_created_at" : ISODate("2015-01-25T22:39:31.319Z"), "sender_id" : ObjectId("54c53ed54298651ae2758044"), "bid_state" : "receiver_accepted", "timestamp_list" : [ [ "outstanding", ISODate("2015-01-25T22:39:31.320Z") ], [ "receiver_accepted", ISODate("2015-01-25T22:39:43.678Z") ] ], "bid_amount" : 63, "times_and_places_list" : [ { "selectedAmOrPm" : "am", "selectedDuration" : "30m", "selectedMinute" : 30, "selectedHour" : 5, "seconds_since_epoch" : 1522527400, "selectedDate" : "2015-1-29-Thursday", "place_name" : "my place" } ], "accepted_time_and_place_index" : 0 })
