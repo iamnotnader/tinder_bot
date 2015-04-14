@@ -1,0 +1,4 @@
+This Google doc tells you how to set up a production server:
+https://docs.google.com/document/d/1Rm6kUvyq9TeL7HlbAsfkHWFPas2_HdoeSst11feC8Nw/edit
+
+To deploy, just do a git pull, then restart the apache server.

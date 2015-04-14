@@ -1,0 +1,79 @@
+<div class="app__modal-overlay" {{action "close"}}>
+</div>
+<div class="bid-ask-center-helper" {{action "close"}}>
+  <div class="bid-ask__modal-content-container onboarding-flow-comp__rearrange-container"
+      {{action "noClose"}}>
+    <div class="cards-your-pin__content__text-container" style="width: auto;">
+      <div class="bid-ask__text-headers">
+        {{#if eventIsBid}}
+          Bid on this user to go on a date with them
+        {{/if}}
+        {{#if eventIsAsk}}
+          Ask this person to bid on you
+        {{/if}}
+        {{#if eventIsModifyBid}}
+          Modify your bid.
+        {{/if}}
+        {{#if eventIsModifyAsk}}
+          Modify your ask.
+        {{/if}}
+      </div>
+      <div style="display: inline-block;">$</div>
+      {{input value=sharedFields.amountToBid
+        maxlength=4
+        placeholder=bidBoxPlaceholder
+        classNames="bid-info-modal__bid-input bid-input-fields"
+        focus-in='bidBoxFocused'
+        focus-out='bidBoxUnfocused'
+      }}
+      <div class="bid-ask__text-headers">
+        Select a time and place
+      </div>
+      {{input value=sharedFields.placeSelected
+        maxlength=50
+        placeholder='Where do you want to meet?'
+        classNames="bid-info-modal__place-input bid-input-fields"
+      }}
+      <div class="bid-ask__fields-wrapper">
+        {{date-time-picker fieldsSet=sharedFields.fieldsSet1}}
+{{!--         {{#if firstFieldIsValid}}
+          {{date-time-picker fieldsSet=sharedFields.fieldsSet2}}
+          {{date-time-picker fieldsSet=sharedFields.fieldsSet3}}
+        {{/if}} --}}
+      </div>
+
+      {{#if eventIsBid}}
+        <div {{action "bidButtonPressed"}} class="col-md-offset-2 col-md-4 bid-ask__buttons">
+          <div class="general__center-vertically">bid</div>
+        </div>
+        <div {{action "close"}} class="col-md-offset-1 col-md-4 bid-ask__cancel-button">
+          <div class="general__center-vertically">cancel</div>
+        </div>
+      {{/if}}
+      {{#if eventIsAsk}}
+        <div {{action "close"}} class="col-md-offset-1 col-md-4 bid-ask__cancel-button">
+          <div class="general__center-vertically">cancel</div>
+        </div>
+        <div {{action "askButtonPressed"}} class="col-md-offset-2 col-md-4 bid-ask__buttons">
+          <div class="general__center-vertically">ask</div>
+        </div>
+      {{/if}}
+      {{#if eventIsModifyBid}}
+        <div {{action "bidButtonPressed"}} class="col-md-offset-2 col-md-4 bid-ask__buttons">
+          <div class="general__center-vertically">modify bid</div>
+        </div>
+        <div {{action "close"}} class="col-md-offset-1 col-md-4 bid-ask__cancel-button">
+          <div class="general__center-vertically">cancel</div>
+        </div>
+      {{/if}}
+      {{#if eventIsModifyAsk}}
+        <div {{action "close"}} class="col-md-offset-1 col-md-4 bid-ask__cancel-button">
+          <div class="general__center-vertically">cancel</div>
+        </div>
+        <div {{action "askButtonPressed"}} class="col-md-offset-2 col-md-4 bid-ask__buttons">
+          <div class="general__center-vertically">modify ask</div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

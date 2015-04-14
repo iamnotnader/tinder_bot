@@ -1,0 +1,84 @@
+{{#each receiverObj in pastUnreviewedDates.theyPaid}}
+  <div class="main-feed-view__card-container">
+    {{cards-receiver-leave-review receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in pastUnreviewedDates.youPaid}}
+  <div class="main-feed-view__card-container">
+    {{cards-sender-leave-review receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in upcomingDates.theyPaid}}
+  <div class="main-feed-view__card-container">
+    {{cards-upcoming-date-they-paid receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in upcomingDates.youPaid}}
+  <div class="main-feed-view__card-container">
+    {{cards-upcoming-date-you-paid receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in unpaidDates.youNeedToPay}}
+  <div class="main-feed-view__card-container">
+    {{cards-you-need-to-pay receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in usersHaveBidOnYou}}
+  <div class="main-feed-view__card-container">
+    {{cards-bid-on-you receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in unpaidDates.waitingOnThemToPay}}
+  <div class="main-feed-view__card-container">
+    {{cards-waiting-on-them-to-pay receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in usersYouHaveBidOn}}
+  <div class="main-feed-view__card-container">
+    {{cards-you-bid-on receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in pinnedUsers}}
+  <div class="main-feed-view__card-container">
+    {{cards-your-pin receiverObj=receiverObj senderObj=user
+    updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'
+    fieldsSet1=fieldsSet1 fieldsSet2=fieldsSet2 fieldsSet3=fieldsSet3
+    sharedFields=sharedFields}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in pokedYou}}
+  <div class="main-feed-view__card-container">
+    {{cards-poked-you receiverObj=receiverObj senderObj=user
+      updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in youPoked.noOffer}}
+  <div class="main-feed-view__card-container">
+    {{cards-you-poked-no-offer receiverObj=receiverObj senderObj=user
+      updateHook='updateBiddiesAndOffers' openModalWithMessage='openModalWithMessage'
+      fieldsSet1=fieldsSet1 fieldsSet2=fieldsSet2 fieldsSet3=fieldsSet3
+      sharedFields=sharedFields}}
+  </div>
+{{/each}}
+
+{{#each receiverObj in youPoked.proposedOffer}}
+  {{!-- TODO(daddy): Maybe put something here --}}
+{{/each}}

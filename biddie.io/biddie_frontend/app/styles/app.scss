@@ -1,0 +1,143 @@
+@import 'constants';
+@import 'foundation';
+@import 'home';
+@import 'topnav';
+@import 'profile';
+@import 'basic-modals';
+@import 'login';
+@import 'how-it-works';
+@import 'onboarding-flow-comp';
+@import 'user-info-form';
+@import 'dashboard-photo';
+@import 'feed-cards';
+@import 'utils';
+@import 'profile-drilldown';
+@import 'user-preview-comp';
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+.app__modal-overlay {
+  position: fixed;
+  top: 0;
+  background-color: rgb(102, 102, 102);
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  left: 0;
+  opacity: .8;
+}
+
+$app__modal-content-container-width: 70%;
+$app__modal-content-container-offset: 5%;
+$app__modal-content-container-width-mobile: 90%;
+.app__modal-content-container {
+  position: absolute;
+  top: $app__modal-content-container-offset;
+  margin-bottom: $app__modal-content-container-offset;
+  left: (100%-$app__modal-content-container-width)/2;
+  width: $app__modal-content-container-width;
+  text-align: center;
+  background-color: white;
+  //box-shadow: 0px 2px 4px 0px;
+  border-radius: 3px;
+  padding-bottom: 2em;
+  border-radius: 4px;
+  border: 1px solid #ccd0d9;
+
+  @media #{$iphone-5s} {
+    left: (100%-$app__modal-content-container-width-mobile)/2;
+    width: $app__modal-content-container-width-mobile;
+  }
+}
+
+.zero-font-size-inline-block-hack {
+  // This is a hack. The reason we need it is because there's always shitty
+  // space when you have two inline-blocks together.
+  // http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  font-size: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.body__wrapper {
+  width: $total-width; // stolen from okcupid.
+  clear: both;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  position: relative;
+
+  // TODO(daddy): This fucks up when the content is longer than the length
+  // of the page.
+  min-height: 100%;
+  height: 100%;
+
+
+  @media #{$iphone-5s} {
+    width: 95%;
+  }
+}
+
+.body__navbar__right-buttons {
+  float: right;
+}
+
+.body__dashboard-left {
+  float: left;
+  width: $side-panel-width;
+}
+
+.body__dashboard-right {
+  float: left;
+  width: $side-panel-width;
+  padding: 10px;
+}
+
+select.make-red {
+  background-color: rgb(250, 217, 217);;
+}
+
+input.make-red {
+  background-color: rgb(250, 217, 217);;
+
+  &:active, &:hover, &:focus {
+    background-color: rgb(250, 217, 217);;
+  }
+}
+
+textarea.make-red {
+  background-color: rgb(250, 217, 217);;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.facebook-photo-component-selected {
+  border: 5px solid $heavy-pink;
+}
+
+.content__wrapper {
+  margin-top: 15px;
+}
+
+body > .ember-view {
+    height: 100%;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.display-none {
+  display: none;
+}

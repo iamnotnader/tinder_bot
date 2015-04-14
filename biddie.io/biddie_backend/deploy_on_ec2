@@ -1,0 +1,11 @@
+echo 'Pulling new code.'
+sudo git pull
+
+echo 'Installing requirements.'
+sudo pip install -r requirements.txt
+
+echo 'Copying over apache config.'
+sudo cp ./biddie.io.conf /etc/apache2/sites-available/biddie.io.conf
+
+echo 'Restarting apache.'
+sudo /etc/init.d/apache2 restart

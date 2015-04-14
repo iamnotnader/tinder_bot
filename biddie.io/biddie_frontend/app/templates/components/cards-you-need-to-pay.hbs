@@ -1,0 +1,60 @@
+<div class="cards-your-pin__container">
+  <div class="cards-bid-on-you__header-container cards-waiting-on-them-to-pay__color-top">
+    <img class="cards-your-pin__close" src="images/cancel_button.svg" {{action 'cancelBidButtonPressed'}}>
+    <div class="cards-your-pin__header-text-left">
+      You Need to Pay
+    </div>
+    <div class="cards-your-pin__header-text-right">
+      {{receiverObj.first_name}} {{receiverObj.last_name}}
+    </div>
+  </div>
+  <div class="cards-bid-on-you__content">
+    <div class="cards-your-pin__picture">
+      {{dashboard-photo selectedUserObj=receiverObj}}
+    </div>
+    <div class="cards-your-pin__content__text-container">
+      <div class="cards-bid-on-you__times-container">
+        <div style="text-align: left;">
+          <div class="cards-bid-on-you__bid-label cards-waiting-on-them-to-pay__content-color">
+            Amount: 
+          </div>
+          <div class="cards-bid-on-you__bid">
+            ${{receiverObj.bid_data.bid_amount}}
+          </div>
+        </div>
+        <div style="text-align: left;">
+          <div class="cards-bid-on-you__place-label cards-waiting-on-them-to-pay__content-color">
+            Place: 
+          </div>
+          <div class="cards-bid-on-you__place">
+            {{receiverObj.bid_data.times_and_places_list.0.place_name}}
+          </div>
+          <div style="text-align: left;">
+            <div class="cards-bid-on-you__place-label cards-waiting-on-them-to-pay__content-color">
+              How long:
+            </div>
+            <div class="cards-bid-on-you__place">
+              {{timesAndPlaces.0.duration}}
+            </div>
+          </div>
+        </div>
+        <div class="cards-bid-on-you__time-label cards-waiting-on-them-to-pay__content-color">
+            Time they selected:
+        </div>
+        {{#each timesAndPlaces}}
+          <div class="cards-bid-on-you__time">
+            {{weekday}} {{month}}/{{day}} at {{hour}}:{{minute}}{{amOrPm}}
+          </div>
+        {{/each}}
+        <div class="cards-bid-on-you__time-label cards-waiting-on-them-to-pay__info-color" style="margin-top: 1em;">
+            This person has accepted your offer! After we have a card on file, you'll be given an anonymous chat so you can meet at the accepted time and place. Don't worry, your card will only be charged if you both show up.
+        </div>
+      </div>
+      <div class="cards-bid-on-you__accept-button cards-waiting-on-them-to-pay__color-top"
+            {{action 'payMeButtonPressed' receiverObj}}>
+        pay for date!
+      </div>
+    </div>
+  </div>
+</div>
+{{yield}}

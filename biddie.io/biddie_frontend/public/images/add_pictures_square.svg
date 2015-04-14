@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="189px" height="171px" viewBox="0 0 189 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 61</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-61" sketch:type="MSArtboardGroup">
+            <g id="Rectangle-55-+-drag-&amp;-drop-+-Shape-2" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+                <rect id="Rectangle-55" stroke="#4A4A4A" sketch:type="MSShapeGroup" x="0.5" y="0.274793388" width="185" height="168.450413" rx="4"></rect>
+                <text id="drag-&amp;-drop" sketch:type="MSTextLayer" font-family="Tahoma" font-size="23" font-weight="bold" sketch:alignment="middle" fill="#4A4A4A">
+                    <tspan x="24.8706055" y="98.2747934">drag &amp; drop</tspan>
+                    <tspan x="24.572998" y="126.274793">your photos</tspan>
+                    <tspan x="21.2712402" y="154.274793">to rearrange</tspan>
+                </text>
+                <path d="M93.7333731,46.9044362 L102.657075,66.389972 L96.0760597,69.2747934 L87.5612537,49.5797934 L86.4930746,47.0967577 L84.5200597,48.9433648 L74.0709254,58.713722 L73.9978507,9.27479339 L110.002149,42.8972934 L95.293194,44.2301505 L92.6232836,44.4696148 L93.7333731,46.9044362 L93.7333731,46.9044362 Z" id="Shape" fill="#4A4A4A" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

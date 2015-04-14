@@ -1,0 +1,246 @@
+$home__left-button-tab-height: 1.8em;
+$home__left-button-tab-text-height: 1em;
+$home__button-text-size: 1.5rem;
+
+.home__dashboard-left__button-tab {
+  position: relative;
+  width: 95%;
+  margin-left: 2.5%;
+  background-color: grey;
+  font-size: 20px;
+  height: $home__left-button-tab-height;
+  cursor: pointer;
+  color: white;
+  background-color: $grey-blue;
+  text-align: left;
+  padding-left: 1em;
+}
+
+.home__left-text {
+  display: inline-block;
+  font-size: 1em;
+  font-family: main_font_bold;
+}
+
+.home__dashboard-left__tab-container {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  display: block;
+  padding: .5rem;
+}
+
+.home__button-tab-selected {
+  background-color: $medium-pink;
+  width: 100%;
+  margin-left: 0;
+  border-radius: 0;
+  box-shadow: 0px 0px 9px black;
+}
+
+.home__dashboard-left__button-tab-last {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.home__dashboard-left__button-tab-first {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.home__dashboard-middle {
+  float: left; 
+  width: $middle-panel-width;
+  padding: .5rem;
+}
+
+.home__dashboard-middle__inside {
+  background-color: $grey-blue;
+  border-radius: .5rem;
+  box-shadow: 0px 0px 2px black;
+}
+
+.home__result-set-container {
+  font-size: 0;
+  margin-bottom: .5rem;
+  padding-top: 2rem;
+}
+
+.home__biddie-buttons-container {
+}
+
+.home__single-result-container {
+  background-color: white;
+  margin: 1em 0;
+  background-color: white;
+  &:hover {
+    padding: 3px;
+  }
+}
+
+.home__biddie-image-buttons-div {
+  width: 100%;
+}
+
+.home__biddie-image-div {
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(- $profile-photo-padding / 2);
+  }
+}
+
+.home__biddie-image {
+  width: 100%;
+  height: 200px;
+
+  cursor: pointer;
+}
+
+button.home__biddie-bid-button {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+
+  border: 2px solid purple;
+  border-radius: 30px;
+}
+
+.home__bid-info-container {
+  font-size: 20px;
+}
+
+.home__search-fields-container {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+select.home__search-dropdown {
+  margin-bottom: 0;
+  width: auto;
+  padding-right: 2em;
+  color: #EA80B0;
+  font-family: main_font_bold;
+  background-color: white;
+  border-radius: 3px;
+  height: 2.2rem;
+  cursor: pointer;
+
+  @media #{$iphone-5s} {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+}
+
+input.home__zip-search {
+  margin-bottom: 0;
+  width: 5em;
+  color: #EA80B0;
+  font-family: main_font_bold;
+  background-color: white;
+  border-radius: 3px;
+  display: inline-block;
+  height: 2.1rem;
+
+  @media #{$iphone-5s} {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+}
+
+.home__search-button {
+  color: white;
+  background-color: $medium-green;
+  font-family: main_font_bold;
+  width: 6em;
+  height: 2.1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-block;
+  margin-left: 1em;
+  vertical-align: middle;
+  &:hover {
+    background-color: $light-green;
+  }
+
+  @media #{$iphone-5s} {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+}
+
+.home__looking-for-text {
+  font-size: 1.5em;
+  font-family: main_font_bold;
+  color: #29424F; 
+  margin-top: .5em;
+  text-align: center;
+  display: block;
+}
+
+.home__near-text {
+  font-size: 1.5em;
+  font-family: main_font_bold;
+  color: #29424F; 
+  margin-top: .5em;
+  margin-left: 1em;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+
+  @media #{$iphone-5s} {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+$home-search__half-button-width: 49%;
+.home-search__half-button {
+  display: inline-block;
+  width: $home-search__half-button-width;
+  text-align: center;
+  background-color: white;
+  font-size: $home__button-text-size;
+  font-family: main_font_bold;
+  box-shadow: 0px 2px 4px 0px black;
+  color: $medium-pink;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 2em;
+}
+
+.home-search__half-button-left {
+  margin-right: (100% - 2*$home-search__half-button-width);
+}
+
+.home-search__poke-icon {
+  vertical-align: middle;
+  position: relative;
+  height: 1.5em;
+  left: 0.15em;
+  top: 0.1em;
+}
+
+.home-search__pin-icon {
+  vertical-align: middle;
+  position: relative;
+  height: 1.5em;
+  top: .1em;
+  left: .1em;
+}
+
+
+.home__number-next-to-tab {
+  @extend .general__center-vertically;
+  font-size: $general__button-tab-font-size;
+  font-family: main_font_bold;
+  color: $medium-pink; 
+  display: inline-block;
+  float: right;
+}
+

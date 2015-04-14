@@ -1,0 +1,39 @@
+.l-alert-modal {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 80px;
+  margin-bottom: 80px;
+  width: $modal-width;
+  background-color: #fff;
+}
+
+.l-profile-input-modal {
+  @extend .l-alert-modal;
+  width: $modal-width;
+  position: absolute;
+  padding-bottom: $profile-photo-padding;
+  padding-top: $profile-photo-padding;
+}
+
+
+.l-alert-modal-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.l-profile-input-overlay {
+  @extend .l-alert-modal-overlay;
+}
+
+.l-alert-modal-title {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+

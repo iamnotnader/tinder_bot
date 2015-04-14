@@ -1,0 +1,59 @@
+<div class="app__modal-overlay" {{action 'closeOnboardingPics'}}>
+</div>
+<div class="onboarding-flow-comp__overall-container">
+  <div class="onboarding-flow-comp__rearrange-container">
+    <div class="onboarding-flow-comp__header-container">
+      <div style="width: 4em; display: inline-block;"></div>
+      <div style="display: inline-block;">Upload Photos</div>
+      <div class="facebook-picker__done-picking-facebook-pics" {{action 'doneRearrangingPics'}}>
+        Done
+      </div>
+    </div>
+    <div class="onboarding-flow-comp__buttons-container">
+      <div class="onboarding-flow-comp__facebook-button" {{action 'uploadFromFacebook'}}>
+        upload from facebook
+      </div>
+      <div class="onboarding-flow-comp__upload-button">
+        upload from desktop
+      </div>
+    </div>
+    <div class="onboarding-flow-comp__images-container">
+      {{pic-rearranger allPhotos=allPhotos user=user}}
+    </div>
+  </div>
+</div>
+<div class="onboarding-flow-comp__overall-container display-none">
+  <div class="onboarding-flow-comp__facebook-picker-container">
+    <div class="onboarding-flow-comp__header-container">
+      <div style="width: 4em; display: inline-block;"></div>
+      <div style="display: inline-block;">Select Photos</div>
+      <div class="facebook-picker__done-picking-facebook-pics" {{action 'doneUploadingFacebook'}}>
+        Done
+      </div>
+    </div>
+    <div class="onboarding-flow-comp__images-container">
+      {{#each photo in allPhotos}}
+          <div class="onboarding-flow-comp__single-image-container">
+            {{facebook-photo photoData=photo user_id=user.id
+              classNames="profile__initial-facebook-photo"}}
+          </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+<div class="onboarding-flow-comp__overall-container display-none">
+  <div class="onboarding-flow-comp__user-info-container">
+    <div class="onboarding-flow-comp__header-container">
+      <div class="facebook-picker__done-picking-facebook-pics" {{action 'backFromProfileInfoView'}}
+          style="float: left;">
+        Back
+      </div>
+      <div style="display: inline-block;">Last Step!</div>
+      <div class="facebook-picker__done-picking-facebook-pics" {{action 'sendCloseCallback'}}>
+        Done
+      </div>
+    </div>
+    {{user-info-form user=user}}
+  </div>
+</div>
+{{yield}}

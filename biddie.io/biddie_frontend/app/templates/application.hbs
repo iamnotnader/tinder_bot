@@ -1,0 +1,9 @@
+{{#if model}}
+  {{partial "topnav"}}
+{{else}}
+  {{partial "login-nav"}}
+{{/if}}
+{{outlet}}
+{{outlet profile-drilldown}}
+{{outlet bid-ask-modal}}
+{{outlet modal}}

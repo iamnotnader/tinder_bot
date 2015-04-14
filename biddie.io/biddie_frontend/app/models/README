@@ -1,0 +1,3 @@
+Because Ember-Data sucks right now, everything model-related is handled by
+the utility class SimpleData under utils/simple-data. That single file should
+tell you everything you need to know about persistence.

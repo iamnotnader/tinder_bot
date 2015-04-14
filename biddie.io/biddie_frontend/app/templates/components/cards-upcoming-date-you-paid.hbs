@@ -1,0 +1,67 @@
+<div class="cards-your-pin__container">
+  <div class="cards-bid-on-you__header-container cards-upcoming-date__color-top">
+    <img class="cards-your-pin__close" src="images/cancel_button.svg" {{action 'cancelBidButtonPressed'}}>
+    <div class="cards-your-pin__header-text-left">
+      Upcoming Date!
+    </div>
+    <div class="cards-your-pin__header-text-right">
+      {{receiverObj.first_name}} {{receiverObj.last_name}}
+    </div>
+  </div>
+  <div class="cards-bid-on-you__content">
+    <div class="cards-your-pin__picture">
+      {{dashboard-photo selectedUserObj=receiverObj}}
+    </div>
+    <div class="cards-your-pin__content__text-container">
+      <div class="cards-bid-on-you__times-container">
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__bid-label cards-upcoming-date__content-color">
+            Amount: 
+          </div>
+          <div class="cards-bid-on-you__bid">
+            ${{receiverObj.bid_data.bid_amount}}
+          </div>
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__place-label cards-upcoming-date__content-color">
+            Place: 
+          </div>
+          <div class="cards-bid-on-you__place">
+            {{receiverObj.bid_data.times_and_places_list.0.place_name}}
+          </div>
+          <div class="cards-your-pin__text-snap-left">
+            <div class="cards-bid-on-you__place-label cards-upcoming-date__content-color">
+              How long:
+            </div>
+            <div class="cards-bid-on-you__place">
+              {{timesAndPlaces.0.duration}}
+            </div>
+          </div>
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__time-label cards-upcoming-date__content-color cards-your-pin__text-inline">
+              Time:
+          </div>
+          {{#each timesAndPlaces}}
+            <div class="cards-bid-on-you__time">
+              {{weekday}} {{month}}/{{day}} at {{hour}}:{{minute}}{{amOrPm}}
+            </div>
+          {{/each}}
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__time-label cards-upcoming-date__content-color cards-your-pin__text-inline">
+            Text your date:
+          </div>
+          <div class="cards-bid-on-you__time">
+            571-235-8457
+          </div>
+        </div>
+        <div class="cards-bid-on-you__time-label cards-upcoming-date__info-color" style="margin-top: 1em;">
+            Your card is on-file and you will be charged if both you and your date show up. You can cancel up to one hour before your date.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{yield}}
+

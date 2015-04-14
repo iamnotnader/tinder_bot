@@ -1,0 +1,78 @@
+$topnav-navbar-height: 4em;
+
+$topnav-biddie-logo-margin-left: 2em;
+$topnav-biddie-logo-width: 7em;
+$topnav-biddie-logo-height: 1.9em;
+$topnav-biddie-logo-margin-top: ($topnav-navbar-height - $topnav-biddie-logo-height) / 2;
+
+$topnav-link-font-size: 1.45em;
+$topnav-link-margin-top: ($topnav-navbar-height - ($topnav-link-font-size+.5em)) / 2;
+
+.body__navbar {
+  background-color: $dark-blue;
+  width: 100%;
+  height: $topnav-navbar-height;
+  display: block;
+  position: relative;
+}
+
+.topnav__biddie-logo-container {
+  display: inline-block;
+  margin-top: $topnav-biddie-logo-margin-top;
+  margin-left: $topnav-biddie-logo-margin-left;
+  
+
+  @media #{$iphone-5s} {
+    margin-left: .1em;
+  }
+}
+
+.topnav__biddie-logo {
+  width: $topnav-biddie-logo-width;
+  height: $topnav-biddie-logo-height;
+}
+
+.topnav__logout {
+  margin-right: 0px;
+}
+
+.topnav__link-container {
+  float: right;
+  font-family: main_font_regular;
+  margin-top: $topnav-link-margin-top;
+  margin-right: 1em;
+
+  @media #{$iphone-5s} {
+    margin-right: 1em;
+  }
+}
+
+.topnav__rightmost-button {
+  margin-right: $topnav-biddie-logo-margin-left;
+
+  @media #{$iphone-5s} {
+    margin-right: .1em;
+  }
+}
+
+.topnav__link,
+.topnav__link:visited,
+.topnav__link:active,
+.topnav__link:link {
+  color: $light-blue-custom;
+  font-size: $topnav-link-font-size;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $medium-pink;
+  }
+
+  @media #{$iphone-5s} {
+    font-size: 1.2em;
+  }
+}
+
+.topnav__link.active {
+  color: $medium-pink;
+}

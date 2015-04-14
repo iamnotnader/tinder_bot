@@ -1,0 +1,1 @@
+export var login_get_notLoggedIn = '{"id": null, "success": false}';

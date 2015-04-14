@@ -1,0 +1,92 @@
+{{#if showUserInSearch}}
+  <div class="user-preview-comp__container">
+    <div class="user-preview-comp__photo-container">
+      {{dashboard-photo selectedUserObj=userObj userIndex=userIndex userList=userList
+            clickHandler='picClicked'}}
+    </div>
+    <div class="user-preview-comp__name">
+      {{userObj.first_name}} {{userObj.last_name}}
+    </div>
+    <div class="user-preview-comp__age-place">
+      {{#if userObj.age}}
+        {{userObj.age}}·
+      {{/if}}
+      New York
+    </div>
+    <div class="row user-preview-comp__stat-container">
+      {{#if youBidOnThisUser}}
+        <div {{bind-attr class=":row :user-preview-comp__sticky-buttons-container"}}>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-5"
+                {{action 'userPreviewBidOrAskButtonPressed' 'modifyBid'}}>
+              <div class="profile-drilldown__clear-button" style="margin-top: 1em;">
+                <div class="general__center-vertically">modify bid</div>
+              </div>
+            </div>
+            <div class="col-md-5" {{action 'userPreviewCancelBidButtonPressed'}}>
+              <div class="profile-drilldown__clear-button user-preview-comp__cancel" style="margin-top: 1em;">
+                <div class="general__center-vertically">cancel bid</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+      {{#if youAskedThisUser}}
+        <div {{bind-attr class=":row :user-preview-comp__sticky-buttons-container"}}>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-5"
+                {{action 'userPreviewBidOrAskButtonPressed' 'modifyAsk'}}>
+              <div class="profile-drilldown__clear-button" style="margin-top: 1em;">
+                <div class="general__center-vertically">modify ask</div>
+              </div>
+            </div>
+            <div class="col-md-5" {{action 'userPreviewCancelAskButtonPressed'}}>
+              <div class="profile-drilldown__clear-button user-preview-comp__cancel" style="margin-top: 1em;">
+                <div class="general__center-vertically">cancel ask</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if userIsUntouched}}
+        <div {{bind-attr class=":row :user-preview-comp__buttons-container :hide-on-hover"}}>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-5" {{action 'userPreviewBidOrAskButtonPressed' 'bid'}}>
+              <div class="profile-drilldown__clear-button user-preview-comp__bid">
+                <div class="general__center-vertically">bid</div>
+              </div>
+            </div>
+            <div class="col-md-5" {{action 'userPreviewBidOrAskButtonPressed' 'ask'}}>
+              <div class="profile-drilldown__clear-button user-preview-comp__ask">
+                <div class="general__center-vertically">ask</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div {{bind-attr class=":user-preview-comp__summary-stat-container"}}>
+          <div class="col-md-6 user-preview-comp__stat">
+            {{profile-rating-comp statValue=numDates iconSrc="icons/num-dates-icon.svg"
+                classNames="user-preview-comp__stat-div" iconClass="user-preview-comp__icon-container"
+                fontClass="user-preview-comp__stat-text"}}
+          </div>
+          <div class="col-md-6 user-preview-comp__stat">
+            {{profile-rating-comp statValue=verySatisfiedNum iconSrc="icons/very-satisfied-icon.svg"
+                classNames="user-preview-comp__stat-div" iconClass="user-preview-comp__icon-container"
+                fontClass="user-preview-comp__stat-text"}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+      {{#if isOnline}}
+        <div class="user-preview-comp__suggested-bid">
+          online now!
+        </div>
+      {{else}}
+        <div class="user-preview-comp__suggested-bid" style="color: #849199;">
+          not online
+        </div>
+      {{/if}}
+  </div>
+{{/if}}
+{{yield}}

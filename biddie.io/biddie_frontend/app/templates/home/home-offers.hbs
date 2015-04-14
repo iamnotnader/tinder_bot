@@ -1,0 +1,38 @@
+OFFERS TO GO ON DATES
+<div>
+  {{#each senderObj in controllers.application.usersByCategory.have_bid_on_you}}
+    {{#if senderObj.photos}}
+      <div class="home__single-result-container">
+          <div class="home__biddie-image-container">
+            {{dashboard-photo photoData=senderObj.photos selectedUserObj=senderObj
+              userList=userResults userIndex=_view.contentIndex
+              clickHandler='selectUser' imgClasses="home__biddie-image"
+              classNames="home__biddie-image-div"}}
+          </div>
+          <div class="home__bid-info-container">
+            {{receiverObj.first_name}} ${{receiverObj.bid_data.bid_amount}}
+            <div>
+              {{#each receiverObj.bid_data.times_and_places_list}}
+                <div>
+                  Time: {{hour}}:{{minute}}{{am_or_pm}} {{date}}
+                </div>
+                <div>
+                  Place: {{place_name}}
+                </div>
+              {{/each}}
+            </div>
+            <div>
+              <div {{action 'acceptButtonPressed' senderObj}}
+                    class="home-biddies__half-button home-offers__accept-button">
+                ACCEPT
+              </div>
+              <div {{action 'rejectButtonPressed' senderObj}}
+                    class="home-biddies__half-button">
+                REJECT
+              </div>
+            </div>
+          </div>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

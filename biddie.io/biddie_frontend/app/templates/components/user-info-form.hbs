@@ -1,0 +1,129 @@
+<div class="user-info-form__container">
+	<div class="user-info-form__input-fields-container">
+  <div style="text-align: center; margin: 2em 0;">
+    <div class="onboarding-flow-comp__upload-button" {{action 'randomNameButtonPressed'}}
+          style="display: inline;">
+      random name
+    </div>
+  </div>
+	<div class="profile__input-field">
+	  <span class="profile__input-label">First Name<span class="profile__asterisk">*</span>:</span>
+	  {{input value=firstName
+	      classNameBindings=":profile__input"}} {{!-- isFirstNameFilled::make-red --}}
+	</div>
+	<div class="profile__input-field">
+	  <span class="profile__input-label">Last Name<span class="profile__asterisk">*</span>:</span>
+	  {{input value=lastName
+	      classNameBindings=":profile__input"}} {{!-- isLastNameFilled::make-red --}}
+	</div>
+	<div class="profile__input-field" style="margin-top: 25px;">
+	  <span class="profile__input-label">
+	      Sex
+	    <span class="profile__asterisk">
+	      *
+	    </span>
+	  :
+	</span>
+	  {{view Ember.Select content=sexChoices
+	      value=selectedSex
+	      optionValuePath="content.id"
+	      optionLabelPath="content.label"
+	      classNameBindings=":profile__select"}} {{!-- isSexSelected::make-red --}}
+	</div>
+
+	<div class="profile__input-field">
+	  <span class="profile__input-label">Orientation<span class="profile__asterisk">*</span>:</span>
+	  {{view Ember.Select content=orientationChoices
+	      value=selectedOrientation
+	      optionValuePath="content.id"
+	      optionLabelPath="content.label"
+	      classNameBindings=":profile__select"}} {{!-- isOrientationSelected::make-red --}}
+	</div>
+
+	<div class="profile__input-field">
+	    <span class="profile__input-label">Zip Code<span class="profile__asterisk">*</span>:</span>
+	  {{input value=zipCode maxlength=5
+	      classNameBindings=":profile__input-zip"}} {{!-- isZipCodeFilled::make-red --}}
+	</div>
+
+	{{#if ethnicityOn}}
+		<div class="profile__input-field">
+		  <span class="profile__input-label">Ethnicity<span class="profile__asterisk">*</span>:</span>
+		  {{view Ember.Select content=ethnicityChoices
+		      value=selectedEthnicity
+		      optionValuePath="content.id"
+		      optionLabelPath="content.label"
+		      classNameBindings="isEthnicitySelected::make-red :profile__select-ethnicity"}}
+		</div>
+	{{/if}}
+
+	<div class="profile__input-field">
+	  <span class="profile__input-label">Height<span class="profile__asterisk">*</span>:</span>
+	  <div class="profile__height-container">
+	    {{view Ember.Select content=heightFeetChoices
+	        value=selectedHeightFeet
+	        optionValuePath="content.id"
+	        optionLabelPath="content.label"
+	        classNameBindings=":profile__select-ivy"}} {{!-- isHeightFeetSelected::make-red  --}}
+	    {{view Ember.Select content=heightInchesChoices
+	        value=selectedHeightInches
+	        optionValuePath="content.id"
+	        optionLabelPath="content.label"
+	        classNameBindings=":profile__select-ivy"}} {{!-- isHeightInchesSelected::make-red  --}}
+	    </div>
+	</div>
+
+	<div class="profile__input-field">
+	  <span class="profile__input-label">Ivy League?<span class="profile__asterisk">*</span>:</span>
+	  {{view Ember.Select content=ivyLeagueChoices
+	      value=selectedIvyLeague
+	      optionValuePath="content.id"
+	      optionLabelPath="content.label"
+	      classNameBindings=":profile__select-ivy"}} {{!-- isIvyLeagueSelected::make-red --}}
+	</div>
+
+	<div class="profile__input-field">
+	  <span class="profile__input-label">Age<span class="profile__asterisk">*</span>:</span>
+	  {{view Ember.Select content=ageChoices
+	      value=selectedAge
+	      optionValuePath="content.id"
+	      optionLabelPath="content.label"
+	      classNameBindings=":profile__select-ivy"}} {{!-- isAgeSelected::make-red --}}
+	</div>
+
+	{{#if dateOfBirthOn}}
+	<div class="profile__input-field-date">
+	  <span class="profile__input-label-date">Date of Birth<span class="profile__asterisk">*</span>:</span>
+	  <div class="profile__date-container">
+	    {{view Ember.Select content=yearChoices
+	        value=selectedYear
+	        optionValuePath="content.id"
+	        optionLabelPath="content.label"
+	        classNameBindings=":profile__select-date"}} {{!-- isYearSelected::make-red --}}
+	    {{view Ember.Select content=monthChoices
+	        value=selectedMonth
+	        optionValuePath="content.id"
+	        optionLabelPath="content.label"
+	        classNameBindings=":profile__select-date"}} {{!-- isMonthSelected::make-red --}}
+	    {{view Ember.Select content=dayChoices
+	        value=selectedDay
+	        optionValuePath="content.id"
+	        optionLabelPath="content.label"
+	        classNameBindings=":profile__select-date"}} {{!-- isDaySelected::make-red --}}
+	    </div>
+	</div>
+	{{/if}}
+
+	{{#if taglineOn}}
+	<div class="profile__input-field-date">
+		<span class="profile__input-label">Tagline</span>
+	  <div class="profile__textarea-container">
+	    {{textarea value=tagline cols="80" rows="6" maxlength=250
+	        placeholder="How are you different?"
+	        classNameBindings="isTaglineFilled::make-red"}}
+	  </div>
+	</div>
+	{{/if}}
+	</div>
+</div>
+{{yield}}

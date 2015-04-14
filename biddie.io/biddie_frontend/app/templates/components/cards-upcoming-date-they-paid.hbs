@@ -1,0 +1,75 @@
+<div class="cards-your-pin__container">
+  <div class="cards-bid-on-you__header-container cards-upcoming-date__color-top">
+    <img class="cards-your-pin__close" src="images/cancel_button.svg" {{action 'cancelBidButtonPressed'}}>
+    <div class="cards-your-pin__header-text-left">
+      Upcoming Date!
+    </div>
+    <div class="cards-your-pin__header-text-right">
+      {{receiverObj.first_name}} {{receiverObj.last_name}}
+    </div>
+  </div>
+  <div class="cards-bid-on-you__content">
+    <div class="cards-your-pin__picture">
+      {{dashboard-photo selectedUserObj=receiverObj}}
+    </div>
+    <div class="cards-your-pin__content__text-container">
+      <div class="cards-bid-on-you__times-container">
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__bid-label cards-upcoming-date__content-color">
+            Amount: 
+          </div>
+          <div class="cards-bid-on-you__bid">
+            ${{receiverObj.bid_data.bid_amount}}
+          </div>
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__place-label cards-upcoming-date__content-color">
+            Place: 
+          </div>
+          <div class="cards-bid-on-you__place">
+            {{receiverObj.bid_data.times_and_places_list.0.place_name}}
+          </div>
+          <div class="cards-your-pin__text-snap-left">
+            <div class="cards-bid-on-you__place-label cards-upcoming-date__content-color">
+              How long:
+            </div>
+            <div class="cards-bid-on-you__place">
+              {{timesAndPlaces.0.duration}}
+            </div>
+          </div>
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__time-label cards-upcoming-date__content-color cards-your-pin__text-inline">
+              Time:
+          </div>
+          {{#each timesAndPlaces}}
+            <div class="cards-bid-on-you__time">
+              {{weekday}} {{month}}/{{day}} at {{hour}}:{{minute}}{{amOrPm}}
+            </div>
+          {{/each}}
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__time-label cards-upcoming-date__content-color cards-your-pin__text-inline">
+            Text your date:
+          </div>
+          <div class="cards-bid-on-you__time">
+            571-235-8457
+          </div>
+        </div>
+        <div class="cards-your-pin__text-snap-left">
+          <div class="cards-bid-on-you__time-label cards-upcoming-date__content-color cards-your-pin__text-inline">
+            Help hotline:
+          </div>
+          <div class="cards-bid-on-you__time">
+            212-729-6389
+          </div>
+        </div>
+        <div class="cards-bid-on-you__time-label cards-upcoming-date__info-color" style="margin-top: 1em;">
+            Your date has paid and you will get the amount shown above if you show up and your date is satisfied. If you cancel now or don't show up, it will appear as a "no-show" on your record. This will negatively affect people's willingness to date you in the future. On the other hand, cultivating a reputation for always showing up results in higher offers with more attractive bidders.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{yield}}
+

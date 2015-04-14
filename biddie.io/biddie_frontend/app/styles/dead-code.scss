@@ -1,0 +1,33 @@
+.home__right__name-box {
+  text-align: center;
+}
+
+.home__right__tagline-box {
+  clear: both;
+  text-align: left;
+  margin-left: $profile-input-padding;
+}
+
+.home__right-side__input-label {
+  margin-left: $dashboard-selected-photo-padding;
+}
+
+.home__selected-user-photo {
+  width: $profile-main-photo-width;
+  height: $profile-main-photo-width;
+
+  position: absolute;
+}
+
+.home__selected-photo-container {
+  margin-left: $dashboard-selected-photo-padding;
+  margin-right: $dashboard-selected-photo-padding;
+  margin-top: $profile-photo-padding;
+
+  width: $profile-main-photo-width;
+  height: $profile-main-photo-width;
+
+  position: relative;
+
+  display: block;
+}

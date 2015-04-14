@@ -1,0 +1,7 @@
+export PYTHONPATH=$PYTHONPATH:~/Development/biddie_backend/
+
+if [ "$#" -ne 0 ]; then
+    python -m unittest server.tests.like_tests.LikesTestCase.$1
+else
+    python -m unittest --failfast server.tests.like_tests.LikesTestCase
+fi

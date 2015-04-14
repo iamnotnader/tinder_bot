@@ -1,0 +1,57 @@
+<div class="col-md-offset-1 col-md-10">
+  <div class="general__background">
+    <div class="col-md-2" style="padding: 0; margin-top: 1em;">
+      <div class="col-md-offset-1 col-md-10" style="padding: 0;">
+        <div {{action 'aboutButtonPressed'}}
+             {{bind-attr class=":general__button-tab 
+                inAboutSection:general__selected-button-tab:"}}>
+          <div {{bind-attr class=":general__button-tab-text :general__center-vertically
+                    inAboutSection:general__selected-button-tab-text:"}}>
+            About
+          </div>
+        </div>
+        <div {{action 'photosButtonPressed'}} {{bind-attr class=":general__button-tab 
+                inPhotosSection:general__selected-button-tab:"}}>
+          <div {{bind-attr class=":general__button-tab-text :general__center-vertically
+                    inPhotosSection:general__selected-button-tab-text:"}}>
+            Photos
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 general__middle-container">
+      {{#if inAboutSection}}
+        <div class="profile__about-container">
+          <div class="profile__header-container">
+            <div>Fill out your profile</div>
+            <div>Fields will update automatically when changed</div>
+          </div>
+          {{user-info-form user=controllers.application.user ethnicityOn=true taglineOn=true}}
+        </div>
+      {{/if}}
+
+      {{#if inPhotoRearrangeSection}}
+        {{partial 'profile-photo-section'}}
+      {{/if}}
+
+      {{#if inFacebookPhotoUploadSection}}
+        <div class="profile__header-container">
+          <div>Select photos to upload</div>
+        </div>
+        <div class="profile__done-picking-facebook-pics"
+            {{action 'doneUploadingFacebook'}}>
+          Done
+        </div>
+        <div class="profile__images-container">         
+          {{#each photo in controllers.application.user.photos}}
+            <div class="onboarding-flow-comp__single-image-container">
+              {{facebook-photo photoData=photo user_id=user.id
+                  classNames="profile__initial-facebook-photo"}}
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  {{outlet}}
+</div>

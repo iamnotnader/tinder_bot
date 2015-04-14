@@ -1,0 +1,126 @@
+.user-preview-comp__container {
+  font-family: main_font_bold;
+  font-size: 1rem;
+  padding-bottom: .5em;
+  border: 1px solid $profile-photo-border-color;
+}
+
+.user-preview-comp__stat {
+  padding: 0;
+  border: 0;
+}
+
+.user-preview-comp__stat-div {
+  border: none;
+  font-size: 1.5rem;
+
+  @media #{$small-desktop} {
+    height: 1em;
+  }  
+}
+
+.user-preview-comp__name {
+  margin-top: .5em;
+  font-size: 1.2rem;
+  color: #849199;
+
+  @media #{$small-desktop} {
+    font-size: 0.7rem;
+  }
+}
+
+.user-preview-comp__age-place {
+  font-size: 1rem;
+  color: #A5A8B0;
+
+  @media #{$small-desktop} {
+    font-size: 0.7rem;
+  }
+}
+
+.user-preview-comp__suggested-bid {
+  font-size: 1.5rem; 
+  color: #4EBBB5;
+}
+
+.user-preview-comp__stat-container {
+  padding: 0 1em;
+  @media #{$small-desktop} {
+    height: 2rem;
+  }
+}
+
+.user-preview-comp__stat-text {
+  @extend .profile-rating-comp__stat-container;
+  font-size: 2rem;
+
+  @media #{$small-desktop} {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-top: 0.5rem;
+  }
+
+  @media #{$small-desktop} {
+    height: 2rem;
+  }
+}
+
+.user-preview-comp__icon-container {
+  @extend .profile-rating-comp__icon-container;
+  margin-right: .1em;
+}
+
+.user-preview-comp__buttons-container {
+  // This gets manipulated by jquery.
+  height: 5rem;
+}
+
+.user-preview-comp__sticky-buttons-container {
+  height: 5rem;
+}
+
+.user-preview-comp__photo-container {
+  cursor: pointer;
+}
+
+.user-preview-comp__summary-stat-container {
+  height: 5rem;
+}
+
+.user-preview-comp__bid {
+  background-color: #A8B5FF;
+  margin-top: 1em;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #BEC7FD;
+  }
+
+  @media #{$small-desktop} {
+    margin-top: 0.1rem;
+  }
+}
+
+.user-preview-comp__ask {
+  background-color: #FFA8F6;
+  margin-top: 1em;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #FFC9F9;
+  }
+
+  @media #{$small-desktop} {
+    margin-top: 0.1rem;
+  }
+}
+
+.user-preview-comp__cancel {
+  background-color: #FF8B8B;
+  margin-top: 1em;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #FFBCBC;
+  }
+}

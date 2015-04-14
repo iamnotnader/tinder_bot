@@ -1,0 +1,4 @@
+use server;
+
+db.bids.insert({ "receiver_id" : ObjectId("54c53ed54298651ae2758044"), "time_bid_created_at" : ISODate("2015-01-23T06:17:40.936Z"), "sender_id" : ObjectId("54b7385d194498a1acecc5c1"), "bid_state" : "sender_unliked", "timestamp_list" : [ [ "sender_unliked", ISODate("2015-01-23T06:18:26.554Z") ] ] })
+

@@ -1,0 +1,19 @@
+echo 'Running all tests!'
+
+echo 'Running bidding tests.'
+./run_bid_tests
+
+echo 'Running user tests'
+./run_user_tests
+
+echo 'Running payment tests'
+./run_payment_tests
+
+echo 'Running like tests'
+./run_like_tests
+
+echo 'Running review tests'
+./run_leave_review_tests
+
+echo 'Running poke tests'
+./run_poke_tests

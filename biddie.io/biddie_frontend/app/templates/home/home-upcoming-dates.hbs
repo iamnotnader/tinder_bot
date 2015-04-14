@@ -1,0 +1,70 @@
+<h3>UNPAID DATES (no!)</h3>
+<div>
+  {{#each userObj in controllers.application.usersByCategory.unconfirmed_upcoming_dates}}
+    {{#if userObj.photos}}
+      <div class="home__single-result-container">
+        <div class="home__biddie-image-container">
+          {{dashboard-photo photoData=userObj.photos selectedUserObj=userObj
+            userList=userResults userIndex=_view.contentIndex
+            clickHandler='selectUser' imgClasses="home__biddie-image"
+            classNames="home__biddie-image-div home-upcoming-dates__unpaid-dates"}}
+        </div>
+          <div class="l-bid-info-container">
+            <div>
+              {{userObj.first_name}} ${{userObj.bid_data.bid_amount}}
+            </div>
+            {{#each userObj.bid_data.times_and_places_list}}
+              <div>
+                Time: {{seconds_since_epoch}}
+              </div>
+              <div>
+                {{!-- TODO(daddy): show distance here instead of actual place --}}
+                Place: {{place_name}}
+              </div>
+            {{/each}}
+            <div>
+              {{#if userObj.was_sender}}
+                Waiting on other person to confirm.
+              {{else}}
+                <div {{action 'payMe' userObj}}
+                      class="home-biddies__half-button home-upcoming-dates__pay-for-date-button">
+                  CONFIRM
+                </div>
+              {{/if}}
+            </div>
+          </div>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>
+ <h3>PAID DATES (go on these)</h3>
+<div>
+  {{#each senderObj in controllers.application.usersByCategory.confirmed_upcoming_dates}}
+    {{#if senderObj.photos}}
+      <div class="home__single-result-container">
+        <div class="home__biddie-image-container">
+          {{dashboard-photo photoData=senderObj.photos selectedUserObj=senderObj
+            userList=userResults userIndex=_view.contentIndex
+            clickHandler='selectUser' imgClasses="home__biddie-image"
+            classNames="home__biddie-image-div home-upcoming-dates__paid-dates"}}
+        </div>
+        <div class="l-bid-info-container">
+          <div>
+            {{senderObj.first_name}} ${{senderObj.bid_data.bid_amount}}
+          </div>
+          {{#each senderObj.bid_data.times_and_places_list}}
+            <div>
+              Time: {{seconds_since_epoch}}
+            </div>
+            <div>
+              {{!-- TODO(daddy): show distance here instead of actual place --}}
+              Place: {{place_name}}
+            </div>
+          {{/each}}
+          <div>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

@@ -1,0 +1,273 @@
+$hero-text-font-size: 6em;
+$hero-signup-font-size: 4em;
+$hero-logo-font-size: 7em;
+
+$landing-subhero-font-size: 4em;
+$landing-normal-text-font-size: 1.5em;
+
+$iphone-5-hero-text-font-size: 2em;
+
+.login__login-button {
+  width: 100%;
+  font-size: 35px;
+}
+
+.login__biddie-title {
+  font-family: main_font_bold;
+  color: $dark-blue;
+  font-size: 4em;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.login__login-link {
+  font-size: 23px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.login__quote {
+  margin-top: 20px;
+}
+
+.landing__hero-text {
+  font-family: main_font_bold;
+  font-size: 6vw;
+  @media #{$iphone-5s} {
+    font-size: 1.6em;
+  }
+  color: $dark-blue;
+}
+
+.landing__hero-container {
+  @media #{$iphone-5s} {
+    text-align: center;
+  }  
+}
+
+.landing__top-hero-text {
+  text-align: left;
+  margin-left: 1em;
+  margin-bottom: .3em;
+  margin-top: 1rem;
+
+  @media #{$iphone-5s} {
+    margin-left: 0;
+    margin-bottom: .5em;
+  }
+}
+
+.landing__bottom-hero-text {
+  margin-right: 1em;
+  text-align: right;
+  margin-top: .3em;
+
+  @media #{$iphone-5s} {
+    margin: .5em 0;
+    text-align: center;
+  }
+}
+
+.landing__hero-logo-container {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  font-size: 6vw;
+
+  @media #{$iphone-5s} {
+    font-size: 2em;
+  }
+
+  @media #{$small-desktop} {
+    font-size: 5em;
+  }
+}
+
+.landing__hero-logo {
+  font-size: 8em;
+  width: 8em;
+  @media #{$iphone-5s} {
+    font-size: 2em;
+  }
+  @media #{$small-desktop} {
+    font-size: 5em;
+  }
+}
+
+.landing__hero-quip {
+  font-family: main_font_bold;
+  font-size: $landing-subhero-font-size;
+  color: $medium-pink;
+
+  @media #{$iphone-5s} {
+    font-size: 1.4em;
+    margin-top: 1em;
+  }
+}
+
+.landing-wrapper {
+  text-align: center;
+  width: $total-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4em 0;
+
+  @media #{$iphone-5s} {
+    width: 95%;
+    padding: 4em 0;
+  }
+}
+
+.landing__signup-container {
+  text-align: center;
+  padding: 2em 0;
+  @media #{$iphone-5s} {
+    padding: 2.5em 0;
+    font-size: 0.5em;
+  }
+}
+
+.landing__down-angle {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  @media #{$iphone-5s} {
+    margin-top: 0;
+  }
+}
+
+.landing__help-text-background {
+  background-color: $subtle-off-white;
+  border-top: 1px solid $grey-border-color;
+  text-align: center;
+  padding: 0;
+}
+
+.landing__help-text-paragraph {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5em;
+  @media #{$iphone-5s} {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+.landing__white-when-mobile {
+  @media #{$iphone-5s} {
+    display: block;
+    background-color: white;
+    border-top: 1px solid $grey-border-color;
+    width: 100%;
+  }
+}
+
+.landing__help-text-paragraph__header {
+  font-size: $landing-subhero-font-size;
+  font-family: main_font_bold;
+  color: $dark-blue;
+  margin-top: 1em;
+
+  @media #{$iphone-5s} {
+    margin-top: 0em;
+    font-size: 2.2em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.landing__help-text-paragraph__content {
+  font-size: $landing-normal-text-font-size;
+  font-family: main_font_regular;
+  color: $dark-blue;
+  text-align: justify;
+  margin: 1em 0;
+
+  @media #{$iphone-5s} {
+    font-size: 1em;
+  }
+}
+
+.landing__help-text-paragraph__content-middle {
+  @extend .landing__help-text-paragraph__content;
+
+  margin: 0 0;
+  font-size: 2em;
+  text-align: center;
+  font-family: main_font_bold;
+  @media #{$iphone-5s} {
+    font-size: 1.5em;
+  }
+}
+
+.landing__amount-raised-text {
+  font-size: $landing-subhero-font-size;
+  font-family: main_font_bold;
+  color: $dark-blue;
+
+  @media #{$iphone-5s} {
+    margin-top: .5em;
+    font-size: 1.5em;
+  }
+}
+
+.landing__amount-container {
+  border-top: 1px solid $grey-border-color;
+  text-align: center;
+  padding: 3em 0;
+  @media #{$iphone-5s} {
+    padding: 2em 0;
+    padding-bottom: 3em;
+  }
+}
+
+.landing__amount-raised-value {
+  font-size: $landing-subhero-font-size; 
+  color: #70B7B3;
+  margin-top: -.2em;
+
+  @media #{$iphone-5s} {
+    font-size: 2em;
+  }
+}
+
+.landing__signup-button {
+  height: 3rem;
+  background-color: #70B7B3;
+  width: 7em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0;
+  vertical-align: top;
+  color: white;
+
+  &:hover {
+    background-color: #A1DFDB;
+  }
+
+  @media #{$iphone-5s} {
+    margin-top: 0em;
+    font-size: 2.5em;
+    height: 4rem;
+  }
+}
+
+.landing__input-container {
+  display: inline-block;
+}
+
+input.landing__input {
+  height: 3em;
+  width: 25em;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+
+  @media #{$iphone-5s} {
+    width: 80%;
+    margin-bottom: 1.4em;
+  }
+}
